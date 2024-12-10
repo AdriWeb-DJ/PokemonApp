@@ -1,0 +1,62 @@
+<div class="container mt-4">
+  <div class="pokemon-title">
+    <h2>Pokémon</h2>
+  </div>
+
+  <!-- Componente de Filtro por tipo -->
+  <app-category-filter 
+    [availableTypes]="availableTypes" 
+    (typeSelected)="onTypeChange($event)" 
+    (letterSelected)="onLetterSelected($event)" 
+    (searchQueryChanged)="onSearchQueryChanged($event)">
+  </app-category-filter>
+
+  <!-- Spinner de Cargar datos -->
+  <div *ngIf="loading" class="alert alert-info text-center my-1">
+    <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+  </div>
+
+  <!-- Tarjeta pokemon -->
+  <div class="pokemon-list-container mt-4">
+    <div *ngFor="let pokemon of paginatedPokemons" class="pokemon-item card mb-3">
+      <div class="row no-gutters">
+        <!-- Imagen Pokémon -->
+        <div class="col-md-4">
+          <img [src]="pokemon.sprites?.front_default" alt="{{ pokemon.name }}" class="pokemon-image" />
+        </div>
+
+        <!-- Información Pokémon -->
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">{{ pokemon.name | titlecase }}</h5>
+            <p class="card-text">
+              <strong>Tipos:</strong> {{ pokemon.typesText | titlecase }}
+            </p>
+            <button class="button" [routerLink]="['/pokemon', pokemon.id]">
+              Detalles
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paginación -->
+  <div class="pagination">
+    <!-- Botón Anterior -->
+    <button mat-button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1" class="pagination-button">
+      Anterior
+    </button>
+
+    <!-- Indicador de Página Actual y Total de Páginas -->
+    <span class="page-indicator">
+      Página {{ currentPage }} de {{ totalPages }}
+    </span>
+
+    <!-- Botón Siguiente -->
+    <button mat-button (click)="onPageChange(currentPage + 1)" [disabled]="paginatedPokemons.length < itemsPerPage"
+      class="pagination-button">
+      Siguiente
+    </button>
+  </div>
+</div>

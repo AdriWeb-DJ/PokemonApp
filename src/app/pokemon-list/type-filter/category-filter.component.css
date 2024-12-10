@@ -1,0 +1,65 @@
+.filter-container {
+  margin-bottom: 0.1rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+mat-form-field {
+  width: 200px;
+}
+
+.letter-filter {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.letter-filter button {
+  padding: 10px 5px;
+  font-size: 15px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  min-width: 10px;
+  min-height: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.letter-filter button.btn-default {
+  background-color: rgb(118, 9, 196);
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.letter-filter button.btn-selected {
+  background-color: rgb(0, 242, 255);
+  color: rgb(16, 92, 255);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.letter-filter button:hover{background-color: rgb(29, 106, 131);}
+
+@media (max-width: 1280px) {
+  .filter-container {
+    padding: 0 0.5rem;
+  }
+
+  .letter-filter {
+    width: 70%;
+    max-width: 70%;
+  }
+
+  mat-form-field {
+    width: 200px;
+  }
+}
+

@@ -1,0 +1,65 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .pagination-button {
+    background-color: #c003ff;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-button:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+  }
+  
+  .page-indicator {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  .pagination-button:hover {
+    background-color: #62038b;
+  }
+  .page-indicator {
+    font-size: 16px;
+    color: #3d53cc;
+    font-weight: bold;
+  }
+  .pokemon-title  {
+    color: black;
+    background-color: #a412d4;
+    text-shadow: 2px 2px 4px #ffffff;
+    bottom: 10px;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #a412d4;
+  }
+  .button:hover {background-color: #581a69}
+
+  .button:active {
+    background-color: #ad39db;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .card-title{
+    color: black;
+    text-shadow: 2px 2px 5px rgb(204, 0, 255);
+  }
