@@ -63,3 +63,7 @@ mat-form-field {
   }
 }
 
+.search-bar mat-form-field {
+  width: 350px; 
+  font-size: 1.2rem;
+}

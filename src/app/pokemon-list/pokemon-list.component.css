@@ -63,3 +63,17 @@
     color: black;
     text-shadow: 2px 2px 5px rgb(204, 0, 255);
   }
+
+  .pokemon-title h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .pokemon-title {
+    padding: 10px 0;
+    background-color: #a412d4;
+    text-shadow: 2px 2px 4px #ffffff;
+    color: black;
+  }
+  
