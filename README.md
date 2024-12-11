@@ -26,7 +26,7 @@ npm -v # should print `10.9.0`
 una vez hecho esto ya usaremos el comando ng serve, y se iniciará correctamente
 
 
-
+## 
 
 
 
