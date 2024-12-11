@@ -9,21 +9,28 @@ pimero tendremos que acceder dentro de la carpeta PokemonApp
 despues ejecutar los siguientes comandos: 
 
  installs fnm (Fast Node Manager)
+```bash
 winget install Schniz.fnm
-
+```
 configure fnm environment
+```bash
 fnm env --use-on-cd | Out-String | Invoke-Expression
-
+```
  download and install Node.js
+ ```bash
 fnm use --install-if-missing 22
-
+```
  verifies the right Node.js version is in the environment
+ ```bash
 node -v # should print `v22.12.0`
-
+```
  verifies the right npm version is in the environment
+ ```bash
 npm -v # should print `10.9.0`
+```
 
 una vez hecho esto ya usaremos el comando ng serve, y se iniciará correctamente
+
 
 
 ## 
