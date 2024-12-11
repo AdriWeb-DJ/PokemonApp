@@ -29,7 +29,11 @@ node -v # should print `v22.12.0`
 npm -v # should print `10.9.0`
 ```
 
-una vez hecho esto ya usaremos el comando ng serve, y se iniciará correctamente
+una vez hecho esto ya usaremos el comando 
+```bash
+ng serve
+```
+y se iniciará correctamente
 
 
 
